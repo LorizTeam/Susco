@@ -1,1 +1,1 @@
-# Susco
+# Learn first java
