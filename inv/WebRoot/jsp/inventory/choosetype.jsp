@@ -6,6 +6,9 @@
 <%@ page import="com.dtac.inventory.form.ChoosetypeForm" %>
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
+<%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
+<%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
+<%@ page import ="javax.servlet.http.HttpSession.*"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -33,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body bgcolor="#DAC987">
   <html:form action="/choosetype" method="POST">
-  	<% String phone_num = request.getParameter("studentID");%>
+  	<% String phone_num = (String) session.getAttribute("phone_num");%>
   	เติมเงินโทรศัพท์ เบอร์ <%=phone_num%><br/>
   	กรุณาเลือกค่ายที่ต้องการเติม
 <!--  	สำหรับ True-->

@@ -43,13 +43,13 @@ public class ChoosetypeAction extends Action{
 			//ถ้ามีการเลือกประเภทการเติมเงิน
 			if(btntrue != null){
 				String choosetrue = "True";
-				request.setAttribute("choosetype",choosetrue);
+				session.setAttribute("choosetype",choosetrue);
 			}else if(btndtac != null){
 				String choosedtac = "DTAC";
-				request.setAttribute("choosetype",choosedtac);
+				session.setAttribute("choosetype",choosedtac);
 			}else if(btnais != null){
 				String chooseais = "AIS";
-				request.setAttribute("choosetype",chooseais);
+				session.setAttribute("choosetype",chooseais);
 			}
 			//request.setAttribute("phone_num", phone_num);
 			forwardText = "success";

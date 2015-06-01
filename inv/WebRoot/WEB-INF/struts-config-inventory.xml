@@ -39,7 +39,7 @@
             name= "choosebudgetForm"
           	type="com.dtac.inventory.action.ChooseBudgetAction"
       		validate="false"    input="/jsp/inventory/choosebudget.jsp">
-      	<forward name="success"  path="/jsp/inventory/choosebudget.jsp"/>
+      	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
     </action> 
 		<!-- 1.7 Vender ############################################## 06/2012 -->

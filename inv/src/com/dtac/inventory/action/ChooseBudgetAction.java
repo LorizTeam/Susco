@@ -16,9 +16,7 @@ public class ChooseBudgetAction extends Action {
 		String forwardText = "";
 		HttpSession session = request.getSession();
 		// To Do Code Here
-		String loginId 		= "",
-		btn10 = request.getParameter("btn10");
-		
+		String loginId 		= "";	
 		if (session.isNew()) {
 			session.invalidate();
 			request.setAttribute("alertMessage","Session Timeout. Login again.");
@@ -33,7 +31,36 @@ public class ChooseBudgetAction extends Action {
 				return mapping.findForward("relogin");
 			}
 		}
-		forwardText= "cancel";
+		if(request.getParameter("btncancel") == null){
+			if(request.getParameter("btn10") != null){
+				session.setAttribute("budget","10");
+				forwardText= "success";
+			}else if (request.getParameter("btn20") != null){
+				session.setAttribute("budget","20");
+				forwardText= "success";
+			}else if (request.getParameter("btn30") != null){
+				session.setAttribute("budget","30");
+				forwardText= "success";
+			}else if (request.getParameter("btn50") != null){
+				session.setAttribute("budget","50");
+				forwardText= "success";
+			}else if (request.getParameter("btn90") != null){
+				session.setAttribute("budget","90");
+				forwardText= "success";
+			}else if (request.getParameter("btn150") != null){
+				session.setAttribute("budget","150");
+				forwardText= "success";
+			}else if (request.getParameter("btn200") != null){
+				session.setAttribute("budget","200");
+				forwardText= "success";
+			}else if (request.getParameter("btn300") != null){
+				session.setAttribute("budget","300");
+				forwardText= "success";
+			}
+		}else{
+			forwardText= "cancel";
+		}
+		forwardText= "success";
 		return mapping.findForward(forwardText);
 	}
 }

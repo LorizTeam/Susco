@@ -707,7 +707,7 @@ public class MemberSearchAction extends Action {
 		if(billpayment != null){
 			ChoosetypeForm ctf =new ChoosetypeForm();
 			String studentID = memberSearchForm.getStudentID();
-			request.setAttribute("studentID", studentID);
+			session.setAttribute("phone_num", studentID);
 			forwardText = "billpayment";
 		}
 		return mapping.findForward(forwardText);

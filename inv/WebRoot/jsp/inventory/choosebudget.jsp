@@ -7,6 +7,9 @@
 <%@ page import="com.dtac.inventory.form.ChooseBudgetForm" %>
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
+<%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
+<%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
+<%@ page import ="javax.servlet.http.HttpSession.*"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -34,8 +37,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body bgcolor="#DAC987">
   <html:form action="/ChooseBudget" method="POST">
-  	<% 	String phone_num = request.getParameter("phone_num")
-  		,choosetype = (String) request.getAttribute("choosetype");
+  	<% 	String phone_num = (String) session.getAttribute("phone_num")
+  		,choosetype = (String) session.getAttribute("choosetype");
   	 %>
   	เติมเงินโทรศัพท์ เบอร์ <%=phone_num %><br/>
   	เติมเงินค่าย <%=choosetype %>
