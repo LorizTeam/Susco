@@ -19,7 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>My JSP 'SummaryBillPayment.jsp' starting page</title>
-    
+    <%@ include file="../../css/bootstrap.css" %>
+	<%@ include file="../../css/bootstrap-theme.css" %>
+	<%@ include file="../../css/inv.css" %>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -43,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	วงเงินที่เติม  <html:text property="budget" readonly="true" styleClass="form-control" 
 				 value="<%=budget %>"/><br/>
   	ยอดรวม  <html:text property="sumamount" readonly="true" styleClass="form-control" 
-				 value="<%=totalprice %>"/> <br/>
+				 value="<%=totalprice %>"/><br/>
   	จ่าย <br/>
   	ทอน <br/>
   </body>
