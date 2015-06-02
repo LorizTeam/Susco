@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@page import="org.apache.commons.validator.Form"%>
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
@@ -34,10 +35,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     this is my SummaryBillPayment JSP page. <br/>
     <% 	String phone_num = (String) session.getAttribute("phone_num")
   		,choosetype = (String) session.getAttribute("choosetype")
-  		,budget = (String) session.getAttribute("budget");
+  		,budget = (String) session.getAttribute("budget")
+  		,totalprice = (String) session.getAttribute("totalprice");
   	 %>
   	เติมเงินโทรศัพท์ เบอร์ <%=phone_num %><br/>
   	เติมเงินค่าย <%=choosetype %><br/>
-  	วงเงินที่เติม<%=budget %><br/>
+  	วงเงินที่เติม  <html:text property="budget" readonly="true" styleClass="form-control" 
+				 value="<%=budget %>"/><br/>
+  	ยอดรวม  <html:text property="sumamount" readonly="true" styleClass="form-control" 
+				 value="<%=totalprice %>"/> <br/>
+  	จ่าย <br/>
+  	ทอน <br/>
   </body>
 </html>

@@ -36,27 +36,35 @@ public class ChooseBudgetAction extends Action {
 				forwardText= "return";
 			}else if (request.getParameter("btn10") != null){
 				session.setAttribute("budget","10");
+				session.setAttribute("totalprice","12");
 				forwardText= "success";
 			}else if (request.getParameter("btn20") != null){
 				session.setAttribute("budget","20");
+				session.setAttribute("totalprice","23");
 				forwardText= "success";
 			}else if (request.getParameter("btn30") != null){
 				session.setAttribute("budget","30");
+				session.setAttribute("totalprice","34");
 				forwardText= "success";
 			}else if (request.getParameter("btn50") != null){
 				session.setAttribute("budget","50");
+				session.setAttribute("totalprice","55");
 				forwardText= "success";
 			}else if (request.getParameter("btn90") != null){
 				session.setAttribute("budget","90");
+				session.setAttribute("totalprice","95");
 				forwardText= "success";
 			}else if (request.getParameter("btn150") != null){
 				session.setAttribute("budget","150");
+				session.setAttribute("totalprice","155");
 				forwardText= "success";
 			}else if (request.getParameter("btn200") != null){
 				session.setAttribute("budget","200");
+				session.setAttribute("totalprice","205");
 				forwardText= "success";
 			}else if (request.getParameter("btn300") != null){
 				session.setAttribute("budget","300");
+				session.setAttribute("totalprice","305");
 				forwardText= "success";
 			}
 		}else{
