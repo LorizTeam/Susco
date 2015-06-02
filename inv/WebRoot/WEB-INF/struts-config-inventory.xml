@@ -41,6 +41,7 @@
       		validate="false"    input="/jsp/inventory/choosebudget.jsp">
       	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
+      	<forward name="return"  path="/jsp/inventory/choosetype.jsp"/>
     </action> 
 		<!-- 1.7 Vender ############################################## 06/2012 -->
     <action path="/venderListStart"				scope="request"

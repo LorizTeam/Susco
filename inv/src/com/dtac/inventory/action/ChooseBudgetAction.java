@@ -32,7 +32,9 @@ public class ChooseBudgetAction extends Action {
 			}
 		}
 		if(request.getParameter("btncancel") == null){
-			if(request.getParameter("btn10") != null){
+			if(request.getParameter("btnreturn") != null){
+				forwardText= "return";
+			}else if (request.getParameter("btn10") != null){
 				session.setAttribute("budget","10");
 				forwardText= "success";
 			}else if (request.getParameter("btn20") != null){
@@ -60,7 +62,6 @@ public class ChooseBudgetAction extends Action {
 		}else{
 			forwardText= "cancel";
 		}
-		forwardText= "success";
 		return mapping.findForward(forwardText);
 	}
 }

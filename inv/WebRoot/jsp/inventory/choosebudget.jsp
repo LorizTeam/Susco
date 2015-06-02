@@ -59,6 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<button type="submit" name="btn200" value="1"><img src="jsp/image/button00.jpg"/></button>
 <!--	สำหรับ 300 บาท-->
 	<button type="submit" name="btn300" value="1"><img src="jsp/image/button00.jpg"/></button>
+<!--	สำหรับ Return-->
+	<button type="submit" name="btnreturn" value="1"><img src="jsp/image/button00.jpg"/></button>
 <!--	สำหรับ Cancel-->
 	<button type="submit" name="btncancel" value="1"><img src="jsp/image/button00.jpg"/></button>
   </html:form>
