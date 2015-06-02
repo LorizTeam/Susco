@@ -227,11 +227,11 @@ function check_null(form) {
 
 <body bgcolor="#95b2c3">
 <html:form action="/memberSearch" method="POST">
-		<h1 class="text-center text-success"><b>ยินดีต้อนรับเข้าสู่ POS System</b></h1>
+		<h2 class="text-center text-success"><b>ยินดีต้อนรับเข้าสู่ POS System</b></h2>
 		
 		<html:hidden property="sysdate" value="<%=dateUtil.curDate()%>" /> 
 		<!-- ------------------------- add product ----------------------- -->
-	<div class="container-fluid thumbnail">
+	<div class="container-fluid ">
 	<div class="col-md-6">
 		<div class="row">
 			<div class="col-md-3 col-sm-3">
@@ -241,11 +241,11 @@ function check_null(form) {
 		</div>
 		<fieldset class="thumbnail">
 		<div class="row">
-			<div class="col-md-3 col-sm-3 text-right">
+			<div class="col-md-2 col-sm-2 text-right">
 				<h4 class="text-primary">รหัสสินค้า</h4>
 			</div>
-			<div class="col-md-3 col-sm-3">
-				<html:text property="matcode" styleClass="form-control" styleId="matcode"/>
+			<div class="col-md-4 col-sm-4">
+				<html:text property="matcode" styleClass="form-control txt_pos input-lg" styleId="matcode"/>
 			</div>
 			<div class="col-md-1 col-sm-1">
 				<a href="javascript:getMaterial('001');" class="">
@@ -257,7 +257,7 @@ function check_null(form) {
 				<h5 class="text-primary">จำนวน </h5>
 			</div>	
 			<div class="col-md-2 col-sm-2">
-				<html:text property="qty" styleId="qty" styleClass="form-control" 
+				<html:text property="qty" styleId="qty" styleClass="form-control txt_pos input-lg" maxlength="3"
 				 value = "<%= memberSearchForm.getQty()%>" onkeypress="press(event,'qty');"/>		
 			</div>
 			<div class="col-md-1 col-sm-1">
@@ -265,13 +265,13 @@ function check_null(form) {
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-sm-6 text-right">
+			<div class="col-md-4 col-sm-4 text-right">
 			</div>	
 			<div class="col-md-2 col-sm-2 text-right">
 				<h5 class="text-primary">ยอดรวม </h5>
 			</div>	
-			<div class="col-md-2 col-sm-2">
-				<html:text property="sumamount" readonly="true" styleClass="form-control" 
+			<div class="col-md-4 col-sm-4">
+				<html:text property="sumamount" readonly="true" styleClass="form-control text-right txt_pos input-lg" 
 				 value="<%= Float.toString(memberSearchForm.getSumamount())%>"  /> 		
 			</div>
 			<div class="col-md-1 col-sm-1">
@@ -279,26 +279,26 @@ function check_null(form) {
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-sm-6 text-right">
+			<div class="col-md-4 col-sm-4 text-right">
 			</div>	
 			<div class="col-md-2 col-sm-2 text-right">
 				<h5 class="text-primary">จ่าย</h5>
 			</div>	
-			<div class="col-md-2 col-sm-2">
-				<html:text property="totpay" styleId="totpay" styleClass="form-control" onkeyup="getBalance();" />	
+			<div class="col-md-4 col-sm-4">
+				<html:text property="totpay" styleId="totpay" styleClass="form-control text-right txt_pos input-lg" onkeyup="getBalance();" />	
 			</div>
 			<div class="col-md-1 col-sm-1">
 				<h5 class="text-primary"> บาท </h5>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-sm-6 text-right">
+			<div class="col-md-4 col-sm-4 text-right">
 			</div>	
 			<div class="col-md-2 col-sm-2 text-right">
 				<h5 class="text-primary">ทอน</h5>
 			</div>	
-			<div class="col-md-2 col-sm-2">
-				<html:text property="totbalance" readonly="true" styleClass="form-control" onkeyup="getBalance();" />	
+			<div class="col-md-4 col-sm-4">
+				<html:text property="totbalance" readonly="true" styleClass="form-control text-right txt_pos input-lg" onkeyup="getBalance();" />	
 			</div>
 			<div class="col-md-1 col-sm-1">
 				<h5 class="text-primary"> บาท </h5>
@@ -317,10 +317,12 @@ function check_null(form) {
 			<div class="col-md-3 col-sm-3">
 				<h4 class="text-primary">เบอร์โทรศัพท์</h4>
 			</div>
-			<div class="col-md-6 col-sm-6">
-			<html:text property="studentID" styleId="studentid"  
-			styleClass="form-control" onkeypress="press(event,'studentid');" />
-			<html:submit styleClass="btn btn-brown btn-lg col-md-12" property="billpayment" value="Bill Payment" />	   	
+			<div class="col-md-5 col-sm-5">
+			<html:text property="studentID" styleId="studentid "  
+			styleClass="form-control txt_pos input-lg" maxlength="10"  onkeypress="press(event,'studentid');" />
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<html:submit styleClass="btn btn-brown btn-lg col-md-12" property="billpayment" value="Bill Payment" />	   	
 			</div>
 		</div>
 		</fieldset>	 
@@ -412,7 +414,7 @@ function check_null(form) {
 		%>
 		<tr>			
 	   		<td>
-		<input type="radio" name="radio1" onclick="memberSearchForm.matcode.value='<%=itemForm.getMatcode()%>';  memberSearchForm.qty.value='<%=itemForm.getQty()%>'; memberSearchForm.recno.value='<%=x%>';"/> 
+		<input type="radio" class="input-lg form-control" name="radio1" onclick="memberSearchForm.matcode.value='<%=itemForm.getMatcode()%>';  memberSearchForm.qty.value='<%=itemForm.getQty()%>'; memberSearchForm.recno.value='<%=x%>';"/> 
 			   
 			   <html:hidden property="hdrecno" value="<%=Integer.toString(x)%>" />
 			     
