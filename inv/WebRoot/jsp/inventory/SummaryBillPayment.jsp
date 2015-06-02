@@ -1,9 +1,9 @@
 <%@ page contentType="text/html; charset=utf-8" %>
-<%@page import="org.apache.commons.validator.Form"%>
 <%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ page language="java" import="java.util.*,java.text.DecimalFormat" pageEncoding="UTF-8"%>
 <%@ page import="com.dtac.utils.DateUtil" %>
+<%@ page import="com.dtac.inventory.form.SummaryBillPaymentForm" %>
 <%@ page import ="java.sql.*" %>
 <%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
@@ -33,8 +33,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body> 
-    this is my SummaryBillPayment JSP page. <br/>
+  <body>  
+    his is my SummaryBillPayment JSP page. <br/>
     <% 	String phone_num = (String) session.getAttribute("phone_num")
   		,choosetype = (String) session.getAttribute("choosetype")
   		,budget = (String) session.getAttribute("budget")
@@ -42,11 +42,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	 %>
   	เติมเงินโทรศัพท์ เบอร์ <%=phone_num %><br/>
   	เติมเงินค่าย <%=choosetype %><br/>
-  	วงเงินที่เติม  <html:text property="budget" readonly="true" styleClass="form-control" 
+  	วงเงินที่เติม  <html:text property="budget" readonly="true" styleId="budget" styleClass="form-control" 
 				 value="<%=budget %>"/><br/>
-  	ยอดรวม  <html:text property="sumamount" readonly="true" styleClass="form-control" 
+  	ยอดรวม  <html:text property="totalprice" readonly="true" styleId="totalprice" styleClass="form-control" 
 				 value="<%=totalprice %>"/><br/>
-  	จ่าย <br/>
-  	ทอน <br/>
+  	จ่าย  <html:text property="totalpay" styleId="totalpay" styleClass="form-control" value="" onkeyup="GetBalance()"/><br/>
+  	ทอน  <html:text property="totalbalance" styleId="totalbalance" styleClass="form-control" value=""/><br/>
   </body>
+  <script>
+  	function GetBalance(){
+//  		แสดงเงินทอน
+//	alert(document.getElementById("totalpay").value);
+  		document.getElementById("totalbalance").value = document.getElementById("totalpay").value - document.getElementById("totalprice").value;
+  	}
+  </script>
 </html>

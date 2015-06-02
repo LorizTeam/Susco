@@ -7,7 +7,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import com.dtac.inventory.form.ChooseBudgetForm;;
+import com.dtac.inventory.form.ChooseBudgetForm;
 
 public class ChooseBudgetAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,

@@ -18,6 +18,7 @@
 <!-- bill payment Start-->
 <form-bean name="choosetypeForm" 			type="com.dtac.inventory.form.ChoosetypeForm"/>
 <form-bean name="choosebudgetForm" 			type="com.dtac.inventory.form.ChooseBudgetForm"/>
+<form-bean name="summarybillpaymentForm" 			type="com.dtac.inventory.form.SummaryBillPaymentForm"/>
 <!-- bill payment End-->
 
 	</form-beans> 
@@ -42,6 +43,15 @@
       	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
       	<forward name="return"  path="/jsp/inventory/choosetype.jsp"/>
+    </action>
+    <!--	 SummaryBillPayment-->
+    <action path="/SummaryBillPayment"				scope="request"
+            name= "summarybillpaymentForm"
+          	type="com.dtac.inventory.action.SummaryBillPaymentAction"
+      		validate="false"    input="/jsp/inventory/SummaryBillPayment.jsp">
+      	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
+      	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
+      	<forward name="return"  path="/jsp/inventory/choosebudget.jsp"/>
     </action> 
 		<!-- 1.7 Vender ############################################## 06/2012 -->
     <action path="/venderListStart"				scope="request"
