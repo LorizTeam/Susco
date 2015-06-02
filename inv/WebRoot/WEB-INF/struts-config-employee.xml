@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="employeeForm" 		type="com.dtac.employee.form.EmployeeForm"/>	
+		<form-bean name="empTransForm" 		type="com.dtac.employee.form.EmpTransForm"/>
+<!-- 3.1 -->	<form-bean name="periodForm" 		type="com.dtac.employee.form.PeriodForm"/>		
+<!-- 3.2 -->	<form-bean name="calendarForm" 		type="com.dtac.employee.form.CalendarForm"/>	
+		
+		<form-bean name="payPeriodForm"		type="com.dtac.employee.form.PayPeriodForm"/>
+		<form-bean name="payTransForm" 		type="com.dtac.employee.form.PayTransForm"/>
+<!-- 4.1 -->	<form-bean name="fingPrntForm" 		type="com.dtac.employee.form.FingPrntForm"/>
+<!-- 4.2 -->	<form-bean name="workTimeForm"		type="com.dtac.employee.form.WorkTimeForm"/>
+<!-- r.2 -->	<form-bean name="timeAttendForm"	type="com.dtac.employee.form.TimeAttendForm"/>
+
+	</form-beans>
+	<global-forwards/>
+
+	<action-mappings>
+
+ 	<!-- 1.1 Employee ############################################## 09/2011 -->
+    <action path="/employeeListStart"			scope="request"
+            name= "employeeForm"      			validate="false"	
+          	type="com.dtac.employee.action.EmployeeListStartAction" >
+      	<forward name="success"  path="/jsp/employee/EmployeeList.jsp" />
+    </action>   	
+   	<action path="/employeeList"				scope="request"
+            name= "employeeForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmployeeListAction"
+      		validate="false"    input="/jsp/employee/EmployeeList.jsp">
+      	<forward name="success"  path="/jsp/employee/EmployeeList.jsp" />
+      	<forward name="view"     path="/jsp/employee/EmployeeView.jsp"/>
+		<forward name="addnew"   path="/jsp/employee/EmployeeAddNew.jsp" />
+		<forward name="copyto"   path="/jsp/employee/EmployeeCopy.jsp"/>      	
+    </action>
+    <action path="/employeeView"				scope="request"
+            name= "employeeForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmployeeViewAction"
+      		validate="false"    input="/jsp/employee/EmployeeView.jsp">
+   		<forward name="repeat"   path="/jsp/employee/EmployeeView.jsp" />      	
+      	<forward name="success"  path="/jsp/employee/EmployeeList.jsp" />
+    </action>  
+    <action path="/employeeCopy"				scope="request"
+            name= "employeeForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmployeeCopyAction"
+      		validate="false"    input="/jsp/employee/EmployeeCopy.jsp">
+   		<forward name="repeat"   path="/jsp/employee/EmployeeCopy.jsp" />      	
+      	<forward name="success"  path="/jsp/employee/EmployeeList.jsp" />
+    </action>  
+	
+	<!-- Javascript employee search ############################################## 05/2012 -->
+    <action path="/employeeSearchSetup"			scope="request"
+            name= "employeeForm"      			validate="false"	
+          	type="com.dtac.employee.action.EmployeeSearchSetupAction" >
+      	<forward name="success"  path="/jsp/employee/EmployeeSearch.jsp" />
+    </action>   	
+   	<action path="/employeeSearch"				scope="request"
+            name= "employeeForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmployeeSearchAction"
+      		validate="false"    input="/jsp/employee/EmployeeSearch.jsp">
+      	<forward name="success"  path="/jsp/employee/EmployeeSearch.jsp" />
+    </action>
+
+ 	<!-- 2.2 Emp Trans ############################################## 10/2011 -->
+    <action path="/empTransListStart"			scope="request"
+            name= "empTransForm"      			validate="false"	
+          	type="com.dtac.employee.action.EmpTransListStartAction" >
+      	<forward name="success"  path="/jsp/employee/EmpTransList.jsp" />
+    </action>   	
+   	<action path="/empTransList"				scope="request"
+            name= "empTransForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmpTransListAction"
+      		validate="false"    input="/jsp/employee/EmpTransList.jsp">
+      	<forward name="success"  path="/jsp/employee/EmpTransList.jsp" />
+      	<forward name="view"  	 path="/jsp/employee/EmpTransView.jsp" />
+		<forward name="addnew"   path="/jsp/employee/EmpTransAddNew.jsp" />      	
+    </action>
+   	<action path="/empTransView"				scope="request"
+            name= "empTransForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.EmpTransViewAction"
+      		validate="false"    input="/jsp/employee/EmpTransView.jsp">
+      	<forward name="success"  path="/jsp/employee/EmpTransList.jsp" />
+      	<forward name="view"  	 path="/jsp/employee/EmpTransView.jsp" />
+		<forward name="addnew"   path="/jsp/employee/EmpTransAddNew.jsp" />      	
+		<forward name="print"    path="/jsp/repemployee/emptrans01.jsp" />
+    </action>
+
+
+
+ 	<!-- 3.1 Period/Month ############################################ 08/2012 -->
+    <action path="/periodListStart"					scope="request"
+            name= "periodForm"      				validate="false"           	
+          	type="com.dtac.employee.action.PeriodListStartAction" >
+      	<forward name="success"  path="/jsp/employee/PeriodList.jsp" />
+    </action>   	
+   	<action path="/periodList"						scope="request"
+            name= "periodForm"       				parameter="reqCode"
+  			type="com.dtac.employee.action.PeriodListAction"
+      		validate="false"    input="/jsp/employee/PeriodList.jsp">
+      	<forward name="success"  path="/jsp/employee/PeriodList.jsp" />
+      	<forward name="update"   path="/jsp/employee/PeriodUpdate.jsp" />
+    </action>
+   	<action path="/periodUpdate"					scope="request"
+            name= "periodForm"       				parameter="reqCode"
+  			type="com.dtac.employee.action.PeriodUpdateAction"
+      		validate="false"    input="/jsp/employee/PeriodUpdate.jsp">
+      	<forward name="repeat"   path="/jsp/employee/PeriodUpdate.jsp" />
+      	<forward name="success"  path="/jsp/employee/PeriodList.jsp" />      	
+    </action>
+
+ 	<!-- 3.2 Calendar ############################################## 08/2012 -->
+    <action path="/calendarListStart"				scope="request"
+            name= "calendarForm"      				validate="false"           	
+          	type="com.dtac.employee.action.CalendarListStartAction" >
+      	<forward name="success"  path="/jsp/employee/CalendarList.jsp" />
+    </action>   	
+   	<action path="/calendarList"					scope="request"
+            name= "calendarForm"       				parameter="reqCode"
+  			type="com.dtac.employee.action.CalendarListAction"
+      		validate="false"    input="/jsp/employee/CalendarList.jsp">
+      	<forward name="success"  path="/jsp/employee/CalendarList.jsp" />
+      	<forward name="update"   path="/jsp/employee/CalendarUpdate.jsp" />
+    </action>
+   	<action path="/calendarUpdate"					scope="request"
+            name= "calendarForm"       				parameter="reqCode"
+  			type="com.dtac.employee.action.CalendarUpdateAction"
+      		validate="false"    input="/jsp/employee/CalendarUpdate.jsp">
+      	<forward name="repeat"   path="/jsp/employee/CalendarUpdate.jsp" />      		
+      	<forward name="success"  path="/jsp/employee/CalendarList.jsp" />
+    </action>
+    
+ 	<!-- 3.1 Payroll Trans ############################################## 10/2011 -->
+    <action path="/payTransEmpListStart"		scope="request"
+            name= "payTransForm"      			validate="false"	
+          	type="com.dtac.employee.action.PayTransEmpListStartAction" >
+      	<forward name="success"  path="/jsp/employee/PayTransEmpList.jsp" />
+    </action>   	
+   	<action path="/payTransEmpList"				scope="request"
+            name= "payTransForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.PayTransEmpListAction"
+      		validate="false"    input="/jsp/employee/PayTransEmpList.jsp">
+      	<forward name="success"  path="/jsp/employee/PayTransEmpList.jsp" />
+      	<forward name="day"  	 path="/jsp/employee/PayTransDay.jsp" />
+      	<forward name="emp"  	 path="/jsp/employee/PayTransView.jsp" />
+    </action>
+   	<action path="/payTransDay"					scope="request"
+            name= "payTransForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.PayTransDayAction"
+      		validate="false"    input="/jsp/employee/PayTransDay.jsp">
+      	<forward name="success"  path="/jsp/employee/PayTransDay.jsp" />
+    </action>
+   	<action path="/payTransView"				scope="request"
+            name= "payTransForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.PayTransViewAction"
+      		validate="false"    input="/jsp/employee/PayTransView.jsp">
+      	<forward name="success"  path="/jsp/employee/PayTransView.jsp" />
+    </action>
+
+ 	<!-- 3.2 Payroll Period ############################################## 10/2011 -->
+    <action path="/payPeriodListStart"			scope="request"
+            name= "payPeriodForm"      			validate="false"	
+          	type="com.dtac.employee.action.PayPeriodListStartAction" >
+      	<forward name="success"  path="/jsp/employee/PayPeriodList.jsp" />
+    </action>   	
+   	<action path="/payPeriodList"				scope="request"
+            name= "payPeriodForm"       		parameter="reqCode"
+          	type="com.dtac.employee.action.PayPeriodListAction"
+      		validate="false"    input="/jsp/employee/PayPeriodList.jsp">
+      	<forward name="success"  path="/jsp/employee/PayPeriodList.jsp" />
+      	<forward name="update"   path="/jsp/employee/PayPeriodUpdate.jsp" />
+    </action>
+   	<action path="/payPeriodUpdate"				scope="request"
+            name= "payPeriodForm"       		parameter="reqCode"
+          	type="com.dtac.employee.action.PayPeriodUpdateAction"
+      		validate="false"    input="/jsp/employee/PayPeriodUpdate.jsp">
+      	<forward name="repeat"   path="/jsp/employee/PayPeriodUpdate.jsp" />
+      	<forward name="success"  path="/jsp/employee/PayPeriodList.jsp" />
+    </action>
+    <action path="/payPeriodSlipView"			scope="request"
+            name= "payPeriodForm"				validate="false"	
+          	type="com.dtac.employee.action.PayPeriodSlipViewAction" >
+      	<forward name="success"  path="/jsp/reppayroll/payroll02.jsp" />
+    </action>   	
+
+ 	<!-- 4.1 Read Finger Print ############################################## 08/2012 -->
+    <action path="/readFingPrntStart"			scope="request"
+            	name= "fingPrntForm"      		validate="false"	
+          	type="com.dtac.employee.action.ReadFingPrntStartAction" >
+      	<forward name="success"  path="/jsp/employee/ReadFingPrnt.jsp" />
+    </action>   	
+   	<action path="/readFingPrnt"				scope="request"
+            	name= "fingPrntForm"       		parameter="reqCode"
+          	type="com.dtac.employee.action.ReadFingPrntAction"
+      		validate="false"    input="/jsp/employee/ReadFingPrnt.jsp">
+      	<forward name="success"  path="/jsp/employee/ReadFingPrnt.jsp" />
+    </action>
+
+    <!-- 4.2 timeattend ############################################## 08/2012 -->
+    <action path="/workTimeListStart"			scope="request"
+            name= "workTimeForm"      			validate="false"	
+          	type="com.dtac.employee.action.WorkTimeListStartAction" >
+      	<forward name="success"  path="/jsp/employee/WorkTimeList.jsp" />
+    </action>     
+    <action path="/workTimeList"				scope="request"
+            name= "workTimeForm"       			parameter="reqCode"
+          	type="com.dtac.employee.action.WorkTimeListAction"
+      		validate="false"    input="/jsp/employee/WorkTimeList.jsp">
+    	<forward name="success"  path="/jsp/employee/WorkTimeList.jsp" />
+    	<forward name="view"     path="/jsp/employee/WorkTimeView.jsp" />
+   	</action>
+    <action path="/workTimeView"  				scope="request"
+   			name= "workTimeForm"  				parameter="reqCode"
+          	type="com.dtac.employee.action.WorkTimeViewAction"
+   			validate="false"   input="/jsp/employee/WorkTimeView.jsp">
+      	<forward name="repeat"  path="/jsp/employee/WorkTimeView.jsp" />      
+      	<forward name="success" path="/jsp/employee/WorkTimeList.jsp" />       
+ 	</action>
+    
+    <!-- 5.1 Employee Report ######################################################## 10/2011-->
+    <action path="/employeeReport1Start"  		scope="request"
+    		name= "employeeForm"
+            type="com.dtac.employee.action.EmployeeReport1StartAction" >
+      	<forward name="success"  path="/jsp/employee/EmployeeReport1.jsp" />
+    </action>
+	<action path="/employeeReport1"  			scope="request"
+   			name= "employeeForm"  				parameter="reqCode"
+          	type="com.dtac.employee.action.EmployeeReport1Action"
+   			validate="false"    input="/jsp/employee/EmployeeReport1.jsp">
+		<forward name="print"  path="/jsp/repemployee/employee01.jsp" />      			
+		<forward name="excel"  path="/jsp/repemployee/employee01_excel.jsp" />      			
+    </action>
+
+    <!-- 5.2 Time Attendance Report ############################################### 11/2011-->
+    <action path="/timeAttendReport1Start"  	scope="request"
+    		name= "timeAttendForm"
+            type="com.dtac.employee.action.TimeAttendReport1StartAction" >
+      	<forward name="success"  path="/jsp/employee/TimeAttendReport1.jsp" />
+    </action>
+	<action path="/timeAttendReport1"  			scope="request"
+   			name= "timeAttendForm"  			parameter="reqCode"
+          	type="com.dtac.employee.action.TimeAttendReport1Action"
+   			validate="false"  input="/jsp/employee/TimeAttendReport1.jsp">
+   		<forward name="repeat" path="/jsp/employee/TimeAttendReport1.jsp" />
+		<forward name="print"  path="/jsp/repemployee/timeattend01.jsp" />      			
+		<forward name="excel"  path="/jsp/repemployee/time01_excel.jsp" />      			
+    </action>
+		
+	</action-mappings>
+
+	<message-resources key="employeeResources" parameter="com.dtac.struts.EmployeeResources" />
+</struts-config>

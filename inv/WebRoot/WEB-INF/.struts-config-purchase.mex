@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/venderListStart.do" location="2324,0" dimension="300,96" />
+  <StrutsActivity path="/venderList.do" location="2267,347" dimension="276,96" />
+  <StrutsActivity path="/venderView.do" location="2286,1041" dimension="283,96" />
+  <StrutsActivity path="/venderAddNew.do" location="2362,694" dimension="304,96" />
+  <StrutsActivity path="/venderSearchSetup.do" location="374,3491" dimension="323,96" />
+  <StrutsActivity path="/venderSearch.do" location="389,3838" dimension="293,96" />
+  <StrutsActivity path="/prHDListStart.do" location="3206,0" dimension="294,96" />
+  <StrutsActivity path="/prHDList.do" location="3150,347" dimension="270,96" />
+  <StrutsActivity path="/prHDAddNew.do" location="3244,694" dimension="298,96" />
+  <StrutsActivity path="/prDTView.do" location="3170,1041" dimension="275,96" />
+  <StrutsActivity path="/prDTSelectToPOSetup.do" location="2555,2852" dimension="341,96" />
+  <StrutsActivity path="/prDTSelectToPO.do" location="2570,3199" dimension="311,96" />
+  <StrutsActivity path="/poHDListStart.do" location="2767,0" dimension="296,96" />
+  <StrutsActivity path="/poHDList.do" location="2711,347" dimension="272,96" />
+  <StrutsActivity path="/poHDAddNew.do" location="2805,694" dimension="300,96" />
+  <StrutsActivity path="/poDTView.do" location="2731,1041" dimension="277,96" />
+  <StrutsActivity path="/poDTSelectToRecvSetup.do" location="2158,2852" dimension="352,96" />
+  <StrutsActivity path="/poDTSelectToRecv.do" location="2173,3199" dimension="322,96" />
+  <StrutsActivity path="/prReport1Start.do" location="1743,2852" dimension="300,96" />
+  <StrutsActivity path="/prReport1.do" location="1755,3199" dimension="276,96" />
+  <StrutsActivity path="/poReport1Start.do" location="1239,2852" dimension="302,96" />
+  <StrutsActivity path="/poReport1.do" location="1251,3199" dimension="278,96" />
+  <StrutsActivity path="/jsp/purchase/VenderList.jsp" location="50,1050" dimension="181,51" />
+  <StrutsActivity path="/jsp/purchase/VenderAddNew.jsp" location="350,1050" dimension="209,51" />
+  <StrutsActivity path="/jsp/purchase/VenderView.jsp" location="650,1050" dimension="188,51" />
+  <StrutsActivity path="/jsp/purchase/VenderSearch.jsp" location="950,1050" dimension="198,51" />
+  <StrutsActivity path="/jsp/purchase/PRHDList.jsp" location="50,350" dimension="175,51" />
+  <StrutsActivity path="/jsp/purchase/PRHDAddNew.jsp" location="350,350" dimension="203,51" />
+  <StrutsActivity path="/jsp/purchase/PRDTView.jsp" location="650,350" dimension="180,51" />
+  <StrutsActivity path="/jsp/purchase/PRDTSelectToPO.jsp" location="950,350" dimension="216,51" />
+  <StrutsActivity path="/jsp/purchase/POHDList.jsp" location="1250,350" dimension="177,51" />
+  <StrutsActivity path="/jsp/purchase/POHDAddNew.jsp" location="1550,350" dimension="205,51" />
+  <StrutsActivity path="/jsp/purchase/PODTView.jsp" location="1850,350" dimension="182,51" />
+  <StrutsActivity path="/jsp/purchase/PODTSelectToRecv.jsp" location="50,650" dimension="227,51" />
+  <StrutsActivity path="/jsp/purchase/PRReport1.jsp" location="350,650" dimension="181,51" />
+  <StrutsActivity path="/jsp/reppurchase/pr1_excel.jsp" location="650,650" dimension="191,51" />
+  <StrutsActivity path="/jsp/reppurchase/pr1.jsp" location="950,650" dimension="160,51" />
+  <StrutsActivity path="/jsp/purchase/POReport1.jsp" location="1250,650" dimension="183,51" />
+  <StrutsActivity path="/jsp/reppurchase/po1_excel.jsp" location="1550,650" dimension="194,51" />
+  <StrutsActivity path="/jsp/reppurchase/po1.jsp" location="1850,650" dimension="163,51" />
+  <StrutsActivity path="/jsp/inventory/VenderList.jsp" location="2382,196" dimension="183,51" />
+  <StrutsActivity path="/jsp/inventory/VenderAddNew.jsp" location="2367,543" dimension="211,51" />
+  <StrutsActivity path="/jsp/inventory/VenderView.jsp" location="2332,890" dimension="190,51" />
+  <StrutsActivity path="/jsp/inventory/VenderSearch.jsp" location="435,3687" dimension="200,51" />
+  <StrutsActivity path="/jsp/inventory/PRHDList.jsp" location="3264,196" dimension="177,51" />
+  <StrutsActivity path="/jsp/inventory/PRHDAddNew.jsp" location="3249,543" dimension="205,51" />
+  <StrutsActivity path="/jsp/inventory/PRDTView.jsp" location="3216,890" dimension="182,51" />
+  <StrutsActivity path="/jsp/inventory/PRDTSelectToPO.jsp" location="2616,3048" dimension="218,51" />
+  <StrutsActivity path="/jsp/inventory/POHDList.jsp" location="2826,196" dimension="179,51" />
+  <StrutsActivity path="/jsp/inventory/POHDAddNew.jsp" location="2811,543" dimension="207,51" />
+  <StrutsActivity path="/jsp/inventory/PODTView.jsp" location="2778,890" dimension="184,51" />
+  <StrutsActivity path="/jsp/inventory/PODTSelectToRecv.jsp" location="2219,3048" dimension="229,51" />
+  <StrutsActivity path="/jsp/inventory/PRReport1.jsp" location="1801,3048" dimension="183,51" />
+  <StrutsActivity path="/jsp/repinventory/pr1_excel.jsp" location="1658,3395" dimension="193,51" />
+  <StrutsActivity path="/jsp/repinventory/pr1.jsp" location="1951,3395" dimension="162,51" />
+  <StrutsActivity path="/jsp/inventory/POReport1.jsp" location="1297,3048" dimension="185,51" />
+  <StrutsActivity path="/jsp/repinventory/po1_excel.jsp" location="1152,3395" dimension="196,51" />
+  <StrutsActivity path="/jsp/repinventory/po1.jsp" location="1448,3395" dimension="165,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialTypeList.jsp" location="2715,1378" dimension="215,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialGrpUpdate.jsp" location="2877,1725" dimension="228,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialGrpAddNew.jsp" location="2537,1725" dimension="236,51" />
+  <StrutsActivity path="/jsp/inventory/MatDocPeriodList.jsp" location="1913,1378" dimension="222,51" />
+  <StrutsActivity path="/jsp/inventory/MatDocPeriodClose.jsp" location="2076,1725" dimension="233,51" />
+  <StrutsActivity path="/jsp/inventory/MatDocPeriodOpen.jsp" location="1739,1725" dimension="233,51" />
+  <StrutsActivity path="/jsp/inventory/WarehouseList.jsp" location="557,196" dimension="205,51" />
+  <StrutsActivity path="/jsp/inventory/WarehouseUpdate.jsp" location="89,543" dimension="225,51" />
+  <StrutsActivity path="/jsp/inventory/WarehouseAddNew.jsp" location="875,543" dimension="233,51" />
+  <StrutsActivity path="/jsp/inventory/WahoLocationView.jsp" location="545,543" dimension="230,51" />
+  <StrutsActivity path="/jsp/inventory/WahoLocationUpdate.jsp" location="458,890" dimension="243,51" />
+  <StrutsActivity path="/jsp/inventory/WarehouseAuth.jsp" location="3387,3048" dimension="213,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialList.jsp" location="262,2213" dimension="189,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialAddNew.jsp" location="88,2560" dimension="217,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialView.jsp" location="416,2560" dimension="196,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialSearch.jsp" location="61,3687" dimension="206,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialWahoList.jsp" location="868,2213" dimension="220,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialWahoView.jsp" location="787,2560" dimension="227,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialPeriodList.jsp" location="2999,3048" dimension="223,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRecvHDList.jsp" location="1883,196" dimension="231,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRecvDTView.jsp" location="1828,890" dimension="236,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRecvHDAddNew.jsp" location="1868,543" dimension="259,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialIssueHDList.jsp" location="1371,196" dimension="232,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialIssueHDAddNew.jsp" location="1356,543" dimension="260,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialIssueDTView.jsp" location="1316,890" dimension="237,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialBrrwHDList.jsp" location="289,1378" dimension="230,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialBrrwHDAddNew.jsp" location="94,1725" dimension="258,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialBrrwDTView.jsp" location="464,1725" dimension="235,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRetuHDList.jsp" location="1250,2213" dimension="230,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRetuDTView.jsp" location="1248,2560" dimension="235,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialAlocHDList.jsp" location="1113,1378" dimension="230,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialAlocHDAddNew.jsp" location="918,1725" dimension="258,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialAlocDTView.jsp" location="1288,1725" dimension="235,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialReport1.jsp" location="749,3048" dimension="212,51" />
+  <StrutsActivity path="/jsp/repinventory/material1_excel.jsp" location="588,3395" dimension="225,51" />
+  <StrutsActivity path="/jsp/repinventory/material1.jsp" location="913,3395" dimension="194,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialRecvReport1.jsp" location="2983,2213" dimension="237,51" />
+  <StrutsActivity path="/jsp/repinventory/materialrecv1_excel.jsp" location="2812,2560" dimension="247,51" />
+  <StrutsActivity path="/jsp/repinventory/materialrecv1.jsp" location="3159,2560" dimension="216,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialIssueReport1.jsp" location="1758,2213" dimension="238,51" />
+  <StrutsActivity path="/jsp/repinventory/materialissue1_excel.jsp" location="1584,2560" dimension="251,51" />
+  <StrutsActivity path="/jsp/repinventory/materialissue1.jsp" location="1935,2560" dimension="220,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialBrrwReport1.jsp" location="2373,2213" dimension="236,51" />
+  <StrutsActivity path="/jsp/repinventory/materialbrrw1_excel.jsp" location="2200,2560" dimension="249,51" />
+  <StrutsActivity path="/jsp/repinventory/materialbrrw1.jsp" location="2549,2560" dimension="218,51" />
+  <StrutsActivity path="/jsp/inventory/MaterialPeriodReport1.jsp" location="156,3048" dimension="246,51" />
+  <StrutsActivity path="/jsp/repinventory/matperiod1_excel.jsp" location="0,3395" dimension="237,51" />
+  <StrutsActivity path="/jsp/repinventory/matperiod1.jsp" location="337,3395" dimension="206,51" />
+  <StrutsTransition id="/prHDList.do,view,/jsp/purchase/PRDTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3285,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poDTView.do,success,/jsp/purchase/PODTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2869,1089" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderList.do,addnew,/jsp/purchase/VenderAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2267,395" />
+      <AbsolutePoint location="413,395" />
+      <AbsolutePoint location="413,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PRReport1.jsp,null,/prReport1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1893,3247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PRDTView.jsp,null,/prDTView.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="3307,1089" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDAddNew.do,repeat,/jsp/purchase/PRHDAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3393,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDList.do,success,/jsp/purchase/POHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2847,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/VenderList.jsp,null,/venderList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="170,1050" />
+      <AbsolutePoint location="170,835" />
+      <AbsolutePoint location="2317,835" />
+      <AbsolutePoint location="2317,443" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poReport1.do,excel,/jsp/reppurchase/po1_excel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1390,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/POReport1.jsp,null,/poReport1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1390,3247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderAddNew.do,success,/jsp/purchase/VenderView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2362,772" />
+      <AbsolutePoint location="744,772" />
+      <AbsolutePoint location="744,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDAddNew.do,success,/jsp/purchase/PRDTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3393,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prReport1.do,print,/jsp/reppurchase/pr1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1893,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderAddNew.do,repeat,/jsp/purchase/VenderAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2362,742" />
+      <AbsolutePoint location="443,742" />
+      <AbsolutePoint location="443,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDList.do,success,/jsp/purchase/PRHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3285,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/VenderSearch.jsp,null,/venderSearch.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1079,1101" />
+      <AbsolutePoint location="1079,1654" />
+      <AbsolutePoint location="-15,1654" />
+      <AbsolutePoint location="-15,3886" />
+      <AbsolutePoint location="389,3886" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/VenderAddNew.jsp,null,/venderAddNew.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="473,1050" />
+      <AbsolutePoint location="473,1016" />
+      <AbsolutePoint location="2537,1016" />
+      <AbsolutePoint location="2537,790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDAddNew.do,cancel,/jsp/purchase/PRHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3393,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prReport1.do,excel,/jsp/reppurchase/pr1_excel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1893,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderSearchSetup.do,success,/jsp/purchase/VenderSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="374,3539" />
+      <AbsolutePoint location="-45,3539" />
+      <AbsolutePoint location="-45,1564" />
+      <AbsolutePoint location="1049,1564" />
+      <AbsolutePoint location="1049,1101" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDAddNew.do,cancel,/jsp/purchase/POHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2955,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDList.do,view,/jsp/purchase/PODTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2847,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poReport1.do,print,/jsp/reppurchase/po1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1390,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PRHDAddNew.jsp,null,/prHDAddNew.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="3393,742" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDList.do,addnew,/jsp/purchase/PRHDAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3285,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDList.do,addnew,/jsp/purchase/POHDAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2847,395" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderListStart.do,success,/jsp/purchase/VenderList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2324,48" />
+      <AbsolutePoint location="74,48" />
+      <AbsolutePoint location="74,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prReport1Start.do,success,/jsp/purchase/PRReport1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1893,2900" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDAddNew.do,success,/jsp/purchase/PODTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2955,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderList.do,view,/jsp/purchase/VenderView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2267,425" />
+      <AbsolutePoint location="790,425" />
+      <AbsolutePoint location="790,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/POHDAddNew.jsp,null,/poHDAddNew.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2955,742" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poDTSelectToRecv.do,success,/jsp/purchase/PODTSelectToRecv.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2334,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDListStart.do,success,/jsp/purchase/POHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2915,48" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/VenderView.jsp,null,/venderView.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="820,1050" />
+      <AbsolutePoint location="820,986" />
+      <AbsolutePoint location="2427,986" />
+      <AbsolutePoint location="2427,1041" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderView.do,success,/jsp/purchase/VenderView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2286,1116" />
+      <AbsolutePoint location="734,1116" />
+      <AbsolutePoint location="734,1101" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prDTSelectToPO.do,success,/jsp/purchase/PRDTSelectToPO.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2725,3247" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poReport1Start.do,success,/jsp/purchase/POReport1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1390,2900" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prDTView.do,success,/jsp/purchase/PRDTView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3307,1089" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prDTSelectToPOSetup.do,success,/jsp/purchase/PRDTSelectToPO.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2725,2900" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poHDAddNew.do,repeat,/jsp/purchase/POHDAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2955,742" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderAddNew.do,cancel,/jsp/purchase/VenderList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2362,712" />
+      <AbsolutePoint location="140,712" />
+      <AbsolutePoint location="140,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PRDTSelectToPO.jsp,null,/prDTSelectToPO.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2725,3247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PODTSelectToRecv.jsp,null,/poDTSelectToRecv.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2334,3247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prHDListStart.do,success,/jsp/purchase/PRHDList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3353,48" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/poDTSelectToRecvSetup.do,success,/jsp/purchase/PODTSelectToRecv.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2334,2900" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/POHDList.jsp,null,/poHDList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2847,395" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PRHDList.jsp,null,/prHDList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="3285,395" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderList.do,success,/jsp/purchase/VenderList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2267,365" />
+      <AbsolutePoint location="-75,365" />
+      <AbsolutePoint location="-75,1075" />
+      <AbsolutePoint location="50,1075" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/venderSearch.do,success,/jsp/purchase/VenderSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="389,3916" />
+      <AbsolutePoint location="-135,3916" />
+      <AbsolutePoint location="-135,1272" />
+      <AbsolutePoint location="1019,1272" />
+      <AbsolutePoint location="1019,1101" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/purchase/PODTView.jsp,null,/poDTView.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2869,1089" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

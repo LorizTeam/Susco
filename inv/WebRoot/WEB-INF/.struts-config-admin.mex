@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/memberListStart.do" location="994,0" dimension="282,96" />
+  <StrutsActivity path="/memberList.do" location="1006,347" dimension="258,96" />
+  <StrutsActivity path="/memberSetPswd.do" location="778,694" dimension="284,96" />
+  <StrutsActivity path="/memberSetAuth.do" location="1209,694" dimension="282,96" />
+  <StrutsActivity path="/authReport1Start.do" location="1550,50" dimension="296,96" />
+  <StrutsActivity path="/authReport1.do" location="650,150" dimension="272,96" />
+  <StrutsActivity path="/loginReport1Start.do" location="50,1150" dimension="300,96" />
+  <StrutsActivity path="/loginReport1.do" location="650,350" dimension="276,96" />
+  <StrutsActivity path="/masterTableListStart.do" location="204,0" dimension="302,96" />
+  <StrutsActivity path="/masterTableList.do" location="218,347" dimension="278,96" />
+  <StrutsActivity path="/masterTableAddNew.do" location="0,694" dimension="306,96" />
+  <StrutsActivity path="/masterTableUpdate.do" location="435,694" dimension="298,96" />
+  <StrutsActivity path="/memberTypeListStart.do" location="1400,835" dimension="308,96" />
+  <StrutsActivity path="/memberTypeList.do" location="1412,1182" dimension="284,96" />
+  <StrutsActivity path="/login.do" location="781,835" dimension="225,96" />
+  <StrutsActivity path="/loginstart.do" location="1106,835" dimension="249,96" />
+  <StrutsActivity path="/changePasswordSetup.do" location="365,835" dimension="310,96" />
+  <StrutsActivity path="/changePassword.do" location="428,1182" dimension="286,96" />
+  <StrutsActivity path="/signout.do" location="0,1670" dimension="236,96" />
+  <StrutsActivity path="/fileUploadStart.do" location="950,1150" dimension="293,96" />
+  <StrutsActivity path="/fileUpload.do" location="350,1350" dimension="279,96" />
+  <StrutsActivity path="/jsp/admin/MemberList.jsp" location="1048,196" dimension="175,51" />
+  <StrutsActivity path="/jsp/admin/MemberSetAuth.jsp" location="1186,543" dimension="199,51" />
+  <StrutsActivity path="/jsp/admin/MemberSetPswd.jsp" location="885,543" dimension="201,51" />
+  <StrutsActivity path="/jsp/admin/AuthReport1.jsp" location="1550,650" dimension="179,51" />
+  <StrutsActivity path="/jsp/repadmin/auth_appl01.jsp" location="50,850" dimension="193,51" />
+  <StrutsActivity path="/jsp/admin/LoginReport1.jsp" location="50,1550" dimension="183,51" />
+  <StrutsActivity path="/jsp/repadmin/login01_excel.jsp" location="1550,1350" dimension="199,51" />
+  <StrutsActivity path="/jsp/repadmin/login01.jsp" location="1250,1550" dimension="168,51" />
+  <StrutsActivity path="/jsp/admin/MasterTableList.jsp" location="258,196" dimension="195,51" />
+  <StrutsActivity path="/jsp/admin/MasterTableUpdate.jsp" location="407,543" dimension="215,51" />
+  <StrutsActivity path="/jsp/admin/MasterTableAddNew.jsp" location="84,543" dimension="223,51" />
+  <StrutsActivity path="/jsp/admin/MemberTypeList.jsp" location="1453,1031" dimension="201,51" />
+  <StrutsActivity path="/jsp/admin/ChangePassword.jsp" location="470,1031" dimension="203,51" />
+  <StrutsActivity path="/jsp/admin/login.jsp" location="1072,1031" dimension="139,51" />
+  <StrutsActivity path="/jsp/admin/main.jsp" location="790,1031" dimension="139,51" />
+  <StrutsActivity path="/mindex.jsp" location="72,1866" dimension="92,51" />
+  <StrutsActivity path="/jsp/employee/FileUpload.jsp" location="950,1350" dimension="186,51" />
+  <StrutsActivity path="/jsp/admin/FileUpload.jsp" location="1250,1350" dimension="168,51" />
+  <StrutsActivity path="/jsp/admin/PeriodList.jsp" location="103,1031" dimension="164,51" />
+  <StrutsActivity path="/jsp/admin/PeriodUpdate.jsp" location="31,1378" dimension="184,51" />
+  <StrutsActivity path="/jsp/admin/CalendarList.jsp" location="1643,196" dimension="177,51" />
+  <StrutsActivity path="/jsp/admin/CalendarUpdate.jsp" location="1568,543" dimension="197,51" />
+  <StrutsActivity path="/jsp/repsale/quotation1_excel.jsp" location="350,1550" dimension="204,51" />
+  <StrutsActivity path="/jsp/sale/QuotationReport1.jsp" location="650,1550" dimension="193,51" />
+  <StrutsActivity path="/jsp/repsale/quotation1.jsp" location="950,1550" dimension="173,51" />
+  <StrutsTransition id="/memberTypeListStart.do,success,/jsp/admin/MemberTypeList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1553,931" />
+      <AbsolutePoint location="1553,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MemberSetPswd.jsp,null,/memberSetPswd.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="920,594" />
+      <AbsolutePoint location="920,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginReport1.do,print,/jsp/repadmin/login01.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableList.do,update,/jsp/admin/MasterTableUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="481,443" />
+      <AbsolutePoint location="481,543" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableAddNew.do,repeat,/jsp/admin/MasterTableAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="195,694" />
+      <AbsolutePoint location="195,594" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/jsp/admin/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="923,931" />
+      <AbsolutePoint location="923,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableAddNew.do,success,/jsp/admin/MasterTableList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="69,694" />
+      <AbsolutePoint location="69,221" />
+      <AbsolutePoint location="258,221" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,changpasswd,/jsp/admin/ChangePassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="893,931" />
+      <AbsolutePoint location="893,976" />
+      <AbsolutePoint location="601,976" />
+      <AbsolutePoint location="601,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/changePasswordSetup.do,success,/jsp/admin/ChangePassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="571,931" />
+      <AbsolutePoint location="571,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MasterTableAddNew.jsp,null,/masterTableAddNew.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="225,594" />
+      <AbsolutePoint location="225,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberListStart.do,success,/jsp/admin/MemberList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1135,96" />
+      <AbsolutePoint location="1135,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/authReport1Start.do,success,/jsp/admin/AuthReport1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/AuthReport1.jsp,null,/authReport1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginReport1.do,repeat,/jsp/admin/LoginReport1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="141,1575" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberSetAuth.do,success,/jsp/admin/MemberList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1400,694" />
+      <AbsolutePoint location="1400,221" />
+      <AbsolutePoint location="1223,221" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableList.do,success,/jsp/admin/MasterTableList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,347" />
+      <AbsolutePoint location="355,247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MasterTableUpdate.jsp,null,/masterTableUpdate.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="584,594" />
+      <AbsolutePoint location="584,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/LoginReport1.jsp,null,/loginReport1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="141,1575" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberSetPswd.do,success,/jsp/admin/MemberList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="870,694" />
+      <AbsolutePoint location="870,221" />
+      <AbsolutePoint location="1048,221" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpload.do,success,/jsp/admin/FileUpload.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="629,1416" />
+      <AbsolutePoint location="1334,1416" />
+      <AbsolutePoint location="1334,1401" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginReport1Start.do,success,/jsp/admin/LoginReport1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="251,1246" />
+      <AbsolutePoint location="251,1575" />
+      <AbsolutePoint location="233,1575" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/signout.do,success,/mindex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,1766" />
+      <AbsolutePoint location="118,1866" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableUpdate.do,success,/jsp/admin/MasterTableList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="637,694" />
+      <AbsolutePoint location="637,221" />
+      <AbsolutePoint location="453,221" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginReport1.do,excel,/jsp/repadmin/login01_excel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,repeat,/jsp/admin/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="965,931" />
+      <AbsolutePoint location="965,1056" />
+      <AbsolutePoint location="1072,1056" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1091,1031" />
+      <AbsolutePoint location="1091,883" />
+      <AbsolutePoint location="1006,883" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/authReport1.do,print,/jsp/repadmin/auth_appl01.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MasterTableList.jsp,null,/masterTableList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="385,247" />
+      <AbsolutePoint location="385,347" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginstart.do,success,/jsp/admin/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1141,931" />
+      <AbsolutePoint location="1141,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MemberTypeList.jsp,null,/memberTypeList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1583,1082" />
+      <AbsolutePoint location="1583,1182" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/ChangePassword.jsp,null,/changePassword.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="601,1082" />
+      <AbsolutePoint location="601,1182" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberList.do,setauth,/jsp/admin/MemberSetAuth.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1249,443" />
+      <AbsolutePoint location="1249,543" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MemberSetAuth.jsp,null,/memberSetAuth.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1350,594" />
+      <AbsolutePoint location="1350,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberList.do,success,/jsp/admin/MemberList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1135,347" />
+      <AbsolutePoint location="1135,247" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberTypeList.do,success,/jsp/admin/MemberTypeList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1553,1182" />
+      <AbsolutePoint location="1553,1082" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableListStart.do,success,/jsp/admin/MasterTableList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,96" />
+      <AbsolutePoint location="355,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/memberList.do,setpswd,/jsp/admin/MemberSetPswd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1021,443" />
+      <AbsolutePoint location="1021,543" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/MemberList.jsp,null,/memberList.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1165,247" />
+      <AbsolutePoint location="1165,347" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/changePassword.do,repeat,/jsp/admin/ChangePassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="571,1182" />
+      <AbsolutePoint location="571,1082" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/masterTableList.do,addnew,/jsp/admin/MasterTableAddNew.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="233,443" />
+      <AbsolutePoint location="233,543" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/FileUpload.jsp,null,/fileUpload.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1334,1350" />
+      <AbsolutePoint location="1334,1323" />
+      <AbsolutePoint location="489,1323" />
+      <AbsolutePoint location="489,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUploadStart.do,success,/jsp/employee/FileUpload.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1043,1246" />
+      <AbsolutePoint location="1043,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
