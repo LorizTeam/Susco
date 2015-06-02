@@ -2,4 +2,8 @@
 .cal .row div{
 	margin:5px !important;
 }
+.txt_pos{
+	padding:5px;
+	font-size:30px;	
+}
 </style>
