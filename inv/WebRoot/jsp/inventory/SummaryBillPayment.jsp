@@ -33,7 +33,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>  
+  <body> 
+  <html:form action="/SummaryBillPayment" method="POST">
     his is my SummaryBillPayment JSP page. <br/>
     <% 	String phone_num = (String) session.getAttribute("phone_num")
   		,choosetype = (String) session.getAttribute("choosetype")
@@ -48,6 +49,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 value="<%=totalprice %>"/><br/>
   	จ่าย  <html:text property="totalpay" styleId="totalpay" styleClass="form-control" value="" onkeyup="GetBalance()"/><br/>
   	ทอน  <html:text property="totalbalance" styleId="totalbalance" styleClass="form-control" value=""/><br/>
+<!--	สำหรับ Return-->
+	<button type="submit" name="btnreturn" value="1"><img src="jsp/image/button00.jpg"/></button>
+<!--	สำหรับ Cancel-->
+	<button type="submit" name="btncancel" value="1"><img src="jsp/image/button00.jpg"/></button>
+  </html:form>
   </body>
   <script>
   	function GetBalance(){
