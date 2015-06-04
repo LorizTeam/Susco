@@ -35,24 +35,66 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body> 
   <html:form action="/SummaryBillPayment" method="POST">
-    his is my SummaryBillPayment JSP page. <br/>
+    
     <% 	String phone_num = (String) session.getAttribute("phone_num")
   		,choosetype = (String) session.getAttribute("choosetype")
   		,budget = (String) session.getAttribute("budget")
   		,totalprice = (String) session.getAttribute("totalprice");
   	 %>
-  	เติมเงินโทรศัพท์ เบอร์ <%=phone_num %><br/>
-  	เติมเงินค่าย <%=choosetype %><br/>
-  	วงเงินที่เติม  <html:text property="budget" readonly="true" styleId="budget" styleClass="form-control" 
-				 value="<%=budget %>"/><br/>
-  	ยอดรวม  <html:text property="totalprice" readonly="true" styleId="totalprice" styleClass="form-control" 
-				 value="<%=totalprice %>"/><br/>
-  	จ่าย  <html:text property="totalpay" styleId="totalpay" styleClass="form-control" value="" onkeyup="GetBalance()"/><br/>
-  	ทอน  <html:text property="totalbalance" styleId="totalbalance" styleClass="form-control" value=""/><br/>
-<!--	สำหรับ Return-->
-	<button type="submit" name="btnreturn" value="1"><img src="jsp/image/button00.jpg"/></button>
+  	 
+  	 <div class="container">
+  	 <h3 class="text-center text-primary">สรุปการเติมเงิน</h3>
+  	 	<div class="row">
+  	 		<div class="col-md-3"></div>
+  	 		<div class="col-md-6 thumbnail">
+  	 			<h4 class="text-primary"><small>เติมเงินโทรศัพท์ เบอร์  </small> <%=phone_num %></h4>
+  	 			<h4 class="text-primary"><small>เติมเงินค่าย </small> <%=choosetype %></h4>
+  	 				<div class="row">
+  					<div class="col-md-3">
+  						<h5>วงเงินที่เติม</h5>
+  					</div>
+  	 				<div class="col-md-9">
+  	 					<h5 class="text-primary"><%=budget %></h5>
+  	 				</div>	 
+  	 				</div>
+  	 				<div class="row">
+  	 				<div class="col-md-3">
+  	 					<h5>ยอดรวม</h5>
+  	 				</div>
+  	 				<div class="col-md-9">
+  	 					<h5 class="text-primary"><%=totalprice %></h5>
+  	 				</div>
+  	 				</div>
+  	 				<div class="row">
+					<div class="col-md-3"><h5>จ่าย</h5></div>
+  	 				<div class="col-md-9">
+  	 					<html:text property="totalpay" styleId="totalpay"
+  	 					styleClass="form-control" value="" onkeyup="GetBalance()"/>
+  	 				</div>
+  	 				</div>
+  	 				<div class="row">
+  	 				<div class="col-md-3"><h5>ทอน</h5></div>
+  	 				<div class="col-md-9">
+  	 					 <html:text property="totalbalance" styleId="totalbalance" 
+  	 					 styleClass="form-control" value=""/>
+  	 				</div>
+  	 				</div>
+  	 				
+  	 		</div>	 		
+  	 	</div>  
+  	 	<div class="row">
+  	 		<div class="col-md-3"></div>
+  	 		<div class="col-md-6">
+  	 			<button type="submit" class="btn btn-warning col-md-6" name="btnreturn" value="1">กลับ</button>
+  	 			<button type="submit" class="btn btn-danger col-md-6" name="btncancel" value="1">ยกเลิก</button>
+  	 		</div>
+  	 	</div>	 
+  	 </div>
+
+
+	
 <!--	สำหรับ Cancel-->
-	<button type="submit" name="btncancel" value="1"><img src="jsp/image/button00.jpg"/></button>
+	
   </html:form>
   </body>
   <script>
