@@ -60,7 +60,8 @@
             name= "billcodeForm"
           	type="com.dtac.inventory.action.BillCodeAction"
       		validate="false"    input="/jsp/inventory/BillCode.jsp">
-
+			<forward name="submit"  path="/jsp/inventory/SummaryBillPayment.jsp" />
+			<forward name="cancel"  path="/jsp/inventory/input_member.jsp" />
     </action>
 		<!-- 1.7 Vender ############################################## 06/2012 -->
     <action path="/venderListStart"				scope="request"
