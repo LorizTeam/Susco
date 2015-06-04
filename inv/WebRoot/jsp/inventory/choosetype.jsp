@@ -37,8 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body bgcolor="#DAC987">
   <html:form action="/choosetype" method="POST">
   	<% String phone_num = (String) session.getAttribute("phone_num");%>
-  	<h3 class="text-primary"> เติมเงินโทรศัพท์ เบอร์  : <b><%=phone_num%></b> </h3>
-  
+  	<div class="container ">
+  		<h3 class="text-primary"><small>เติมเงินโทรศัพท์ เบอร์  : </small><b><%=phone_num%></b> </h3>
+  	</div>
   <div class="container thumbnail">
   <h4 class="text-primary">เลือกผู้ให้บริการ</h4>
   <div class="row ">
