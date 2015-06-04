@@ -54,6 +54,7 @@
       	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
       	<forward name="return"  path="/jsp/inventory/choosebudget.jsp"/>
+      	<forward name="returnbill"  path="/jsp/inventory/BillCode.jsp"/>
     </action>
     <!-- BillCode -->
     <action path="/BillCode"				scope="request"

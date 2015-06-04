@@ -36,9 +36,11 @@ public class SummaryBillPaymentAction extends Action{
 //				เช็คว่ายกเลิกหรือไม่
 				if(request.getParameter("btnreturn") != null){
 //					เช็ค ถ้ากดย้อนกลับจะกลับไปหน้า choosebudget.jsp
-					forwardText = "return";
-				}else{
-					forwardText = "success";
+					if(session.getAttribute("choosetype") == "ค่าไฟฟ้า" || session.getAttribute("choosetype") == "ค่าน้ำประปา"){
+						forwardText = "returnbill";
+					}else{
+						forwardText = "return";
+					}
 				}
 			}else {
 //				ถ้าไม่ยกเลิก จะส่งไปหน้า input_member.jsp
