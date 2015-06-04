@@ -31,14 +31,40 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
+  <body class="container">
     <html:form action="/BillCode">
-    <!-- สำหรับใส่ Code -->
-    	กรุณาใส่รหัสบาร์โค๊ด  <html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/><br/>
-   	<!--	สำหรับปุ่ม Submit-->
-	<button type="submit" name="btnsubmit" value="Submit">Submit</button>
-	<!--	สำหรับปุ่ม Cancel-->
-	<button type="submit" name="btncancel" value="Cancel">Cancel</button>
+    <br/><br/>
+    	<div class="row thumbnail">
+    		<div class="col-md-3"></div>
+    		
+    		<h2 class="text-primary">ชำระค่าบริการ</h2>
+    		<br/>
+    		<div class="col-md-3"></div>
+    		<div class="col-md-6">			
+    			<div class="row">
+    				<div class="col-md-5"><h4 class="text-primary">กรุณาใส่รหัสบาร์โค๊ด</h4></div>
+    				<div class="col-md-7">
+    					<html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<br/>
+		    			<div class="col-md-3"></div>
+				    		<!--	สำหรับปุ่ม Submit-->
+							<button class="btn btn-success" type="submit" name="btnsubmit" value="Submit">ยืนยัน</button>
+							<!--	สำหรับปุ่ม Cancel-->
+							<button class="btn btn-danger" type="submit" name="btncancel" value="Cancel">ยกเลิก</button>
+		    		
+    			</div>
+    		</div>
+    		<br/>
+    		
+    	</div>
+    	<br/>
+    	
+  
+
+   
     </html:form>
   </body>
 </html>
