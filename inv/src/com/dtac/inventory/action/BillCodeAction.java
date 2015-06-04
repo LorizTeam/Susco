@@ -24,8 +24,13 @@ public class BillCodeAction extends Action {
 		if(request.getParameter("btncancel") == null){
 			if(request.getParameter("btnsubmit") != null){
 				session.setAttribute("billbarcode", billbarcode);
-				session.setAttribute("budget", "2500");
-				session.setAttribute("totalprice", "2515");
+				if(session.getAttribute("choosetype") == "ค่าไฟฟ้า"){
+					session.setAttribute("budget", "2500");
+					session.setAttribute("totalprice", "2515");
+				}else{
+					session.setAttribute("budget", "875");
+					session.setAttribute("totalprice", "890");
+				}
 				forwardText = "submit";
 			}
 		}else{
