@@ -68,15 +68,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	 				<div class="row">
 					<div class="col-md-3"><h5>จ่าย</h5></div>
   	 				<div class="col-md-9">
-  	 					<html:text property="totalpay" styleId="totalpay"
-  	 					styleClass="form-control" value="" onkeyup="GetBalance()"/>
+  	 					<html:text property="totalpay" styleId="totalpay" styleClass="form-control" value="" onkeyup="GetBalance()"/>
   	 				</div>
   	 				</div>
   	 				<div class="row">
   	 				<div class="col-md-3"><h5>ทอน</h5></div>
   	 				<div class="col-md-9">
-  	 					 <html:text property="totalbalance" styleId="totalbalance" 
-  	 					 styleClass="form-control" value=""/>
+  	 					 <html:text property="totalbalance" styleId="totalbalance" styleClass="form-control" value=""/>
   	 				</div>
   	 				</div>
   	 				
@@ -90,18 +88,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	 		</div>
   	 	</div>	 
   	 </div>
-
-
-	
-<!--	สำหรับ Cancel-->
-	
+  	 <html:hidden property="totalprice" styleId="totalprice" value="<%=totalprice %>"/>
   </html:form>
   </body>
   <script>
   	function GetBalance(){
 //  		แสดงเงินทอน
-//	alert(document.getElementById("totalpay").value);
-  		document.getElementById("totalbalance").value = document.getElementById("totalpay").value - document.getElementById("totalprice").value;
+//alert(document.getElementById("totalpay").value);
+  		document.getElementById("totalbalance").value  = document.getElementById("totalpay").value - document.getElementById("totalprice").value;
   	}
   </script>
 </html>

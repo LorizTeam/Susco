@@ -5,6 +5,7 @@
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
 <%@ page import ="javax.servlet.http.HttpSession.*"%>
 <%@ page import ="com.dtac.utils.DateUtil" %>
+<%@ page import ="com.dtac.inventory.form.BillCodeForm" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -32,11 +33,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <html:form action="/BillCode">
-    	กรุณาใส่รหัสบาร์โค๊ด <html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/><br/>
+    <!-- สำหรับใส่ Code -->
+    	กรุณาใส่รหัสบาร์โค๊ด  <html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/><br/>
    	<!--	สำหรับปุ่ม Submit-->
 	<button type="submit" name="btnsubmit" value="Submit">Submit</button>
 	<!--	สำหรับปุ่ม Cancel-->
-	<button type="submit" name="btncancel" value="Cancel">Submit</button>
+	<button type="submit" name="btncancel" value="Cancel">Cancel</button>
     </html:form>
   </body>
 </html>
