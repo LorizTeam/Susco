@@ -69,16 +69,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <h4 class="text-primary">เลือกชำระบิล</h4>
   <div class="row ">
   	<div class="col-md-4">  
-		<!--  	สำหรับ  ชำระบิลค่าน้ำ  -->
+		<!--  	สำหรับ  ชำระบิลค่าไฟ  -->
 		<button class="btn btn-default col-md-12" type="submit" name="btnelectricity" value="1">
-			<img class="img-responsive" src="true.PNG"/>
+			<img class="img-responsive" src="MEA.gif"/>
 		
 		</button>
 	</div>
   	<div class="col-md-4">
   		<!--	สำหรับ  ชำระบิลค่าน้ำ-->
 		<button class="btn btn-default col-md-12"  type="submit" name="btnwater" value="1">
-			<img class="img-responsive" src="DTAC.png"/>
+			<img class="img-responsive" src="Water.png"/>
 		</button>
   	</div>  	
   </div>
