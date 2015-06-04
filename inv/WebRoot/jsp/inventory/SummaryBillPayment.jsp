@@ -37,11 +37,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <html:form action="/SummaryBillPayment" method="POST">
     
     <% 	String phone_num = (String) session.getAttribute("phone_num")
+    	,billbarcode = (String) session.getAttribute("billbarcode")
   		,choosetype = (String) session.getAttribute("choosetype")
   		,budget = (String) session.getAttribute("budget")
   		,totalprice = (String) session.getAttribute("totalprice");
   	 %>
-  	 
+  	 <% if (choosetype == "ค่าไฟฟ้า" || choosetype == "ค่าน้ำประปา"){
+  	 %>
+  	 <div class="container">
+  	 <h3 class="text-center text-primary">สรุปการชำระบิล</h3>
+  	 	<div class="row">
+  	 		<div class="col-md-3"></div>
+  	 		<div class="col-md-6 thumbnail">
+  	 			<h4 class="text-primary"><small>หมายเลขบิล </small> <%=billbarcode %></h4>
+  	 			<h4 class="text-primary"><small>ชำระบิล </small> <%=choosetype %></h4>
+  	 				<div class="row">
+  					<div class="col-md-3">
+  						<h5><%=choosetype %></h5>
+  					</div>
+  	 				<div class="col-md-9">
+  	 					<h5 class="text-primary"><%=budget %></h5>
+  	 				</div>	 
+  	 				</div>
+  	 				<div class="row">
+  	 				<div class="col-md-3">
+  	 					<h5>ยอดรวม</h5>
+  	 				</div>
+  	 				<div class="col-md-9">
+  	 					<h5 class="text-primary"><%=totalprice %></h5>
+  	 				</div>
+  	 				</div>
+  	 				<div class="row">
+					<div class="col-md-3"><h5>จ่าย</h5></div>
+  	 				<div class="col-md-9">
+  	 					<html:text property="totalpay" styleId="totalpay" styleClass="form-control" value="" onkeyup="GetBalance()"/>
+  	 				</div>
+  	 				</div>
+  	 				<div class="row">
+  	 				<div class="col-md-3"><h5>ทอน</h5></div>
+  	 				<div class="col-md-9">
+  	 					 <html:text property="totalbalance" styleId="totalbalance" styleClass="form-control" value=""/>
+  	 				</div>
+  	 				</div>
+  	 				
+  	 		</div>	 		
+  	 	</div>  
+  	 	<div class="row">
+  	 		<div class="col-md-3"></div>
+  	 		<div class="col-md-6">
+  	 			<button type="submit" class="btn btn-warning col-md-6" name="btnreturn" value="1">กลับ</button>
+  	 			<button type="submit" class="btn btn-danger col-md-6" name="btncancel" value="1">ยกเลิก</button>
+  	 		</div>
+  	 	</div>	 
+  	 </div>
+  	 <html:hidden property="totalprice" styleId="totalprice" value="<%=totalprice %>"/>
+  	 <%}else{
+  	 %>
   	 <div class="container">
   	 <h3 class="text-center text-primary">สรุปการเติมเงิน</h3>
   	 	<div class="row">
@@ -89,6 +140,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	 	</div>	 
   	 </div>
   	 <html:hidden property="totalprice" styleId="totalprice" value="<%=totalprice %>"/>
+  	 <%} %>
   </html:form>
   </body>
   <script>

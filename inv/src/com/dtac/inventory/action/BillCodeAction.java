@@ -17,9 +17,20 @@ public class BillCodeAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
 		BillCodeForm bcf = (BillCodeForm) form;
-		String forwardText = "";
+		String forwardText = ""
+			,billbarcode = bcf.getBillbarcode();
+		HttpSession session = request.getSession();
 		// TO DO CODE HERE
-		
+		if(request.getParameter("btncancel") == null){
+			if(request.getParameter("btnsubmit") != null){
+				session.setAttribute("billbarcode", billbarcode);
+				session.setAttribute("budget", "2500");
+				session.setAttribute("totalprice", "2515");
+				forwardText = "submit";
+			}
+		}else{
+			forwardText = "cancel";
+		}
 		return mapping.findForward(forwardText);
 	}
 }

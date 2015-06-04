@@ -33,7 +33,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <html:form action="/BillCode">
+    <% String choosetype = (String) session.getAttribute("choosetype");
+    %>
     <!-- สำหรับใส่ Code -->
+    	ชำระบิล <%=choosetype %><br/>
     	กรุณาใส่รหัสบาร์โค๊ด  <html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/><br/>
    	<!--	สำหรับปุ่ม Submit-->
 	<button type="submit" name="btnsubmit" value="Submit">Submit</button>
