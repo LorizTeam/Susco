@@ -19,6 +19,7 @@
 <form-bean name="choosetypeForm" 			type="com.dtac.inventory.form.ChoosetypeForm"/>
 <form-bean name="choosebudgetForm" 			type="com.dtac.inventory.form.ChooseBudgetForm"/>
 <form-bean name="summarybillpaymentForm" 			type="com.dtac.inventory.form.SummaryBillPaymentForm"/>
+<form-bean name="billcodeForm" 			type="com.dtac.inventory.form.BillCodeForm"/>
 <!-- bill payment End-->
 
 	</form-beans> 
@@ -34,6 +35,7 @@
       		validate="false"    input="/jsp/inventory/choosetype.jsp">
       	<forward name="success"  path="/jsp/inventory/choosebudget.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
+      	<forward name="bill"  path="/jsp/inventory/BillCode.jsp"/>
     </action> 
     <!--	 ChooseBudget-->
     <action path="/ChooseBudget"				scope="request"
@@ -52,7 +54,14 @@
       	<forward name="success"  path="/jsp/inventory/SummaryBillPayment.jsp"/>
       	<forward name="cancel"  path="/jsp/inventory/input_member.jsp"/>
       	<forward name="return"  path="/jsp/inventory/choosebudget.jsp"/>
-    </action> 
+    </action>
+    <!-- BillCode -->
+    <action path="/BillCode"				scope="request"
+            name= "billcodeForm"
+          	type="com.dtac.inventory.action.BillCodeAction"
+      		validate="false"    input="/jsp/inventory/BillCode.jsp">
+
+    </action>
 		<!-- 1.7 Vender ############################################## 06/2012 -->
     <action path="/venderListStart"				scope="request"
             name= "venderForm"      			validate="false"	

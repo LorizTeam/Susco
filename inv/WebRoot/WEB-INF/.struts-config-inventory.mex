@@ -309,6 +309,8 @@
   <StrutsActivity path="/jsp/repinventory/choosetype.jsp" location="950,2850" dimension="206,51" />
   <StrutsActivity path="/jsp/inventory/choosebudget,jsp" location="3050,3250" dimension="204,51" />
   <StrutsActivity path="/jsp/inventory/SummaryillPayment.jsp" location="3950,3550" dimension="235,51" />
+  <StrutsActivity path="/BillCode.do" location="4850,3550" dimension="330,96" />
+  <StrutsActivity path="/jsp/inventory/BillCode.jsp" location="650,3650" dimension="172,51" />
   <StrutsTransition id="/wahoLocationUpdate.do,success,/jsp/inventory/WahoLocationView.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="2173,2086" />
@@ -351,6 +353,15 @@
       <AbsolutePoint location="2750,3378" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/BillCode.do,success,/jsp/inventory/SummaryBillPayment.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5180,3628" />
+      <AbsolutePoint location="5309,3628" />
+      <AbsolutePoint location="5309,3065" />
+      <AbsolutePoint location="3864,3065" />
+      <AbsolutePoint location="3864,3450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/wahoLocationView.do,success,/jsp/inventory/WahoLocationView.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1965,446" />
@@ -386,8 +397,8 @@
   <StrutsTransition id="/ChooseBudget.do,success,/jsp/inventory/SummaryBillPayment.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="2744,3638" />
-      <AbsolutePoint location="3771,3638" />
-      <AbsolutePoint location="3771,3501" />
+      <AbsolutePoint location="3741,3638" />
+      <AbsolutePoint location="3741,3501" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/materialSearchSetup.do,success,/jsp/inventory/MaterialSearch.jsp,1" routingType="0">
@@ -430,6 +441,17 @@
       <AbsolutePoint location="2112,3516" />
       <AbsolutePoint location="2290,3516" />
       <AbsolutePoint location="2290,3950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/inventory/BillCode.jsp,null,/BillCode.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="822,3665" />
+      <AbsolutePoint location="1373,3665" />
+      <AbsolutePoint location="1373,3481" />
+      <AbsolutePoint location="3332,3481" />
+      <AbsolutePoint location="3332,3816" />
+      <AbsolutePoint location="5015,3816" />
+      <AbsolutePoint location="5015,3646" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/SummaryBillPayment.do,success,/jsp/inventory/SummaryBillPayment.jsp,1" routingType="0">
@@ -503,6 +525,12 @@
       <AbsolutePoint location="3287,1171" />
       <AbsolutePoint location="3287,2275" />
       <AbsolutePoint location="3279,2275" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/choosetype.do,bill,/jsp/inventory/BillCode.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1989,3598" />
+      <AbsolutePoint location="736,3675" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/ChooseBudget.do,return,/jsp/inventory/choosetype.jsp,1" routingType="0">
@@ -583,6 +611,16 @@
       <AbsolutePoint location="2019,3665" />
       <AbsolutePoint location="2905,3665" />
       <AbsolutePoint location="2905,3406" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/inventory/SummaryBillPayment.jsp,null,/BillCode.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3801,3501" />
+      <AbsolutePoint location="3801,3638" />
+      <AbsolutePoint location="4230,3638" />
+      <AbsolutePoint location="4230,3421" />
+      <AbsolutePoint location="5015,3421" />
+      <AbsolutePoint location="5015,3550" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/materialBRWDTList.do,repeat,/jsp/inventory/MaterialBRWList.jsp,1" routingType="0">
@@ -780,6 +818,15 @@
       <AbsolutePoint location="3901,2616" />
       <AbsolutePoint location="1965,2616" />
       <AbsolutePoint location="1965,2501" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/BillCode.do,cancel,/jsp/inventory/input_member.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5156,3550" />
+      <AbsolutePoint location="5156,3281" />
+      <AbsolutePoint location="3907,3281" />
+      <AbsolutePoint location="3907,3378" />
+      <AbsolutePoint location="3000,3378" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/productList.do,addnew,/jsp/inventory/ProductList.jsp,1" routingType="0">
@@ -1106,6 +1153,21 @@
       <AbsolutePoint location="1079,1250" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/BillCode.do,return,/jsp/inventory/choosebudget.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5180,3598" />
+      <AbsolutePoint location="5249,3598" />
+      <AbsolutePoint location="5249,1216" />
+      <AbsolutePoint location="2891,1216" />
+      <AbsolutePoint location="2891,1065" />
+      <AbsolutePoint location="1891,1065" />
+      <AbsolutePoint location="1891,716" />
+      <AbsolutePoint location="1789,716" />
+      <AbsolutePoint location="1789,325" />
+      <AbsolutePoint location="752,325" />
+      <AbsolutePoint location="752,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/jsp/inventory/VenderAddNew.jsp,null,/venderAddNew.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="2255,1650" />
@@ -1212,6 +1274,14 @@
       <AbsolutePoint location="114,1550" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/choosetype.do,bill,/jsp/inventory/input_member.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1989,3550" />
+      <AbsolutePoint location="1989,3221" />
+      <AbsolutePoint location="2845,3221" />
+      <AbsolutePoint location="2845,3350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/warehouseList.do,update,/jsp/inventory/WarehouseUpdate.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1550,916" />
@@ -1306,8 +1376,8 @@
   </StrutsTransition>
   <StrutsTransition id="/jsp/inventory/SummaryBillPayment.jsp,null,/SummaryBillPayment.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="3741,3501" />
-      <AbsolutePoint location="3741,3765" />
+      <AbsolutePoint location="3771,3501" />
+      <AbsolutePoint location="3771,3765" />
       <AbsolutePoint location="4385,3765" />
       <AbsolutePoint location="4385,3646" />
     </AutomaticBendpoints>

@@ -4,7 +4,6 @@
 <%@ page language="java" import="java.util.*,java.text.DecimalFormat" pageEncoding="utf-8"%>
 <%@ page import="com.dtac.utils.DateUtil" %>
 <%@ page import="com.dtac.inventory.form.ChoosetypeForm" %>
-<%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
 <%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
@@ -64,8 +63,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</div>
   	
   </div>
-  
-</div>
+  </div>
+  <!-- สำหรับชำระบิล Start  -->
+  <div class="container thumbnail">
+  <h4 class="text-primary">เลือกชำระบิล</h4>
+  <div class="row ">
+  	<div class="col-md-4">  
+		<!--  	สำหรับ  ชำระบิลค่าน้ำ  -->
+		<button class="btn btn-default col-md-12" type="submit" name="btnelectricity" value="1">
+			<img class="img-responsive" src="true.PNG"/>
+		
+		</button>
+	</div>
+  	<div class="col-md-4">
+  		<!--	สำหรับ  ชำระบิลค่าน้ำ-->
+		<button class="btn btn-default col-md-12"  type="submit" name="btnwater" value="1">
+			<img class="img-responsive" src="DTAC.png"/>
+		</button>
+  	</div>  	
+  </div>
+  </div>
+  <!-- สำหรับชำระบิล End -->
 <div class="row">
   	<div class="col-md-4"></div>
   	<div class="col-md-4">

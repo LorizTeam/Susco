@@ -40,19 +40,26 @@ public class ChoosetypeAction extends Action{
 			}
 		}
 		if(btncancel == null){
-			//ถ้ามีการเลือกประเภทการเติมเงิน
+			//ถ้ามีการเลือกประเภทการเติมเงิน btnelectricity
 			if(btntrue != null){
 				String choosetrue = "True";
 				session.setAttribute("choosetype",choosetrue);
+				forwardText = "success";
 			}else if(btndtac != null){
 				String choosedtac = "DTAC";
 				session.setAttribute("choosetype",choosedtac);
+				forwardText = "success";
 			}else if(btnais != null){
 				String chooseais = "AIS";
 				session.setAttribute("choosetype",chooseais);
+				forwardText = "success";
+			}else if(request.getParameter("btnelectricity") != null){
+				session.setAttribute("choosetype","ค่าไฟฟ้า");
+				forwardText = "bill";
+			}else if(request.getParameter("btnwater") != null){
+				session.setAttribute("choosetype","ค่าน้ำประปา");
+				forwardText = "bill";
 			}
-			//request.setAttribute("phone_num", phone_num);
-			forwardText = "success";
 		}else{
 			//ถ้ายกเลิกการเติมเงิน
 			forwardText = "cancel";
