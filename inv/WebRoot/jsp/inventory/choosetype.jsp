@@ -37,16 +37,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body bgcolor="#DAC987">
   <html:form action="/choosetype" method="POST">
   	<% String phone_num = (String) session.getAttribute("phone_num");%>
-  	เติมเงินโทรศัพท์ เบอร์ <%=phone_num%><br/>
-  	กรุณาเลือกค่ายที่ต้องการเติม
-<!--  	สำหรับ True-->
-	<button type="submit" name="btntrue" value="1"><img src="jsp/image/Susco.png"/></button>
-<!--	สำหรับ Dtac-->
-	<button type="submit" name="btndtac" value="1"><img src="jsp/image/button00.jpg"/></button>
-<!--	สำหรับ AIS-->
-	<button type="submit" name="btnais" value="1"><img src="jsp/image/button00.jpg"/></button>
+  	<div class="container ">
+  		<h3 class="text-primary"><small>เติมเงินโทรศัพท์ เบอร์  : </small><b><%=phone_num%></b> </h3>
+  	</div>
+  <div class="container thumbnail">
+  <h4 class="text-primary">เลือกผู้ให้บริการ</h4>
+  <div class="row ">
+  	<div class="col-md-4">  
+		<!--  	สำหรับ True-->
+		<button class="btn btn-default col-md-12" type="submit" name="btntrue" value="1">
+			<img class="img-responsive" src="true.PNG"/>
+		
+		</button>
+	</div>
+  	<div class="col-md-4">
+  		<!--	สำหรับ Dtac-->
+		<button class="btn btn-default col-md-12"  type="submit" name="btndtac" value="1">
+			<img class="img-responsive" src="DTAC.png"/>
+		</button>
+  	</div>
+  	<div class="col-md-4">
+  		<!--	สำหรับ AIS-->
+		<button class="btn btn-default col-md-12"  type="submit" name="btnais" value="1">
+			<img class="img-responsive" src="AIS.png"/>
+		</button>
+  	</div>
+  	
+  </div>
+  
+</div>
+<div class="row">
+  	<div class="col-md-4"></div>
+  	<div class="col-md-4">
 <!--	สำหรับ ยกเลิก-->
-	<button type="submit" name="btncancel" value="1"><img src="jsp/image/button00.jpg"/></button>
+	<button class="btn btn-warning col-md-12 btn-lg" type="submit" name="btncancel" value="1"><h4> << กลับ</h4></button></div>
+  </div>
+
 <!--	สำหรับHidden-->
 	<html:hidden property="phone_num" value="<%=phone_num%>"/>
   </html:form>
