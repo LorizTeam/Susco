@@ -33,12 +33,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body class="container">
     <html:form action="/BillCode">
-<<<<<<< HEAD
+ <% String choosetype = (String) session.getAttribute("choosetype");
+    %>
     <br/><br/>
     	<div class="row thumbnail">
     		<div class="col-md-3"></div>
     		
-    		<h2 class="text-primary">ชำระค่าบริการ</h2>
+    		<h2 class="text-primary">ชำระค่าบริการ  <%=choosetype %></h2>
     		<br/>
     		<div class="col-md-3"></div>
     		<div class="col-md-6">			
@@ -62,21 +63,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		
     	</div>
     	<br/>
-    	
-  
 
    
-=======
-    <% String choosetype = (String) session.getAttribute("choosetype");
-    %>
-    <!-- สำหรับใส่ Code -->
-    	ชำระบิล <%=choosetype %><br/>
-    	กรุณาใส่รหัสบาร์โค๊ด  <html:text property="billbarcode" styleId="billbarcode" styleClass="form-control" value=""/><br/>
-   	<!--	สำหรับปุ่ม Submit-->
-	<button type="submit" name="btnsubmit" value="Submit">Submit</button>
-	<!--	สำหรับปุ่ม Cancel-->
-	<button type="submit" name="btncancel" value="Cancel">Cancel</button>
->>>>>>> origin/master
+   
     </html:form>
   </body>
 </html>
