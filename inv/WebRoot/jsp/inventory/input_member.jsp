@@ -318,7 +318,7 @@ function check_null(form) {
 				<h4 class="text-primary">เบอร์โทรศัพท์</h4>
 			</div>
 			<div class="col-md-5 col-sm-5">
-			<html:text property="studentID" styleId="studentid "  
+			<html:text property="studentID" styleId="studentid"  
 			styleClass="form-control txt_pos input-lg" maxlength="10"  onkeypress="press(event,'studentid');" />
 			</div>
 			<div class="col-md-4 col-sm-4">
